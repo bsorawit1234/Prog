@@ -64,9 +64,10 @@ After the migration is installed and you sign in, Prog can currently:
 4. Load recent saved sessions into the overview and calendar.
 5. Keep an unfinished workout draft on the current device.
 
-Programs and routines are still local prototype data. The progress charts,
-personal records, bodyweight statistics and some calendar summaries also still
-contain sample values. Those are the next database slices to complete.
+Programs and routines can now be created and loaded from Supabase, and workout
+changes can be explicitly saved back to a routine template. The remaining
+database slices are richer routine targets, body measurements, progress photos,
+and deeper performance calculations.
 
 ## Important safety rules
 
