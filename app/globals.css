@@ -55,6 +55,46 @@ button { border:0; font:inherit; color:inherit; cursor:pointer; }
   .top-actions .user-pill { max-width:88px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .top-actions .avatar { display:none; }
 }
+
+/* Phase 6–10: real analytics, measurement check-ins, and library management */
+.heading-actions { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.chart-range { margin-left:auto; color:#9b9698; font-size:9px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.real-chart { display:flex; align-items:end; gap:8px; height:145px; margin-top:18px; padding:0 4px 21px; border-bottom:1px solid var(--line); }
+.chart-column { display:flex; flex:1; align-items:center; justify-content:end; gap:5px; height:100%; min-width:0; flex-direction:column; }
+.chart-column i { display:block; width:100%; min-height:6px; border-radius:5px 5px 2px 2px; background:linear-gradient(180deg, #ef7864, #f3b09f); }
+.chart-column small { overflow:hidden; width:100%; color:#9b9698; font-size:7px; text-align:center; text-overflow:ellipsis; white-space:nowrap; }
+.chart-empty { align-self:center; color:#9b9698; font-size:10px; text-align:center; }
+.library-option { display:grid; grid-template-columns:1fr auto; gap:4px 8px; align-items:center; padding:0; border:1px solid var(--line); border-radius:9px; background:#fff; overflow:hidden; }
+.library-main { display:flex; align-items:center; gap:9px; min-width:0; padding:9px; background:transparent; color:var(--ink); text-align:left; }
+.library-main:hover { background:#fbf6f3; }
+.library-main>span:nth-child(2) { display:grid; gap:2px; min-width:0; }
+.library-main strong { overflow:hidden; font-size:11px; text-overflow:ellipsis; white-space:nowrap; }
+.library-main small { overflow:hidden; color:#979194; font-size:9px; text-overflow:ellipsis; white-space:nowrap; }
+.library-main>b { margin-left:auto; color:var(--coral); font-size:16px; }
+.library-actions { display:flex; gap:3px; padding-right:7px; }
+.library-actions button { padding:5px 6px; border:1px solid var(--line); border-radius:5px; background:transparent; color:#8f898c; font-size:8px; font-weight:700; }
+.library-actions button:hover { border-color:var(--coral); color:var(--coral); }
+.measurement-form { display:grid; grid-template-columns:1fr 90px; gap:10px; }
+.measurement-form label { display:grid; gap:5px; color:#817b7f; font-size:10px; font-weight:700; }
+.measurement-form input, .measurement-form select, .measurement-form textarea { width:100%; min-height:40px; padding:0 10px; border:1px solid var(--line); border-radius:7px; background:var(--surface); color:var(--ink); font:inherit; }
+.measurement-form textarea { padding-top:10px; resize:vertical; }
+.measurement-form .measurement-notes { grid-column:1/-1; }
+.measurement-history { display:grid; gap:8px; margin-top:20px; padding-top:15px; border-top:1px solid var(--line); }
+.measurement-history .kicker { margin:0; }
+.measurement-row { display:grid; grid-template-columns:1fr auto auto; align-items:center; gap:8px; color:#8e888b; font-size:10px; }
+.measurement-row strong { color:var(--ink); font-size:11px; }
+.measurement-row small { color:#b85848; }
+:root[data-theme='dark'] .library-option { background:#201f21; border-color:#373438; }
+:root[data-theme='dark'] .library-main:hover { background:#302d30; }
+:root[data-theme='dark'] .library-actions button { border-color:#4a4549; color:#c2bbbd; }
+:root[data-theme='dark'] .measurement-form input, :root[data-theme='dark'] .measurement-form select, :root[data-theme='dark'] .measurement-form textarea { border-color:#4a4549; background:#29282a; color:#f0ebe7; }
+@media(max-width:680px) {
+  .heading-actions { width:100%; }
+  .heading-actions .secondary-button { flex:1; }
+  .real-chart { gap:4px; height:125px; }
+  .measurement-form { grid-template-columns:1fr 78px; }
+  .library-actions { flex-direction:column; }
+}
 .set-header,.set-row { grid-template-columns:118px 1fr 160px 72px 45px 25px; }
 .set-id { display:flex; align-items:center; gap:7px; min-width:0; }
 .set-id>b { color:#a19da0; }
